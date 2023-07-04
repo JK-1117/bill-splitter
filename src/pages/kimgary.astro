@@ -1,0 +1,23 @@
+---
+import KimgaryCalculator from "../components/KimgaryCalculator.svelte";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Kim Gary | Bill Splitter</title>
+    </head>
+    <body class="font-sans bg-slate-50">
+        <nav class="flex p-4 justify-center bg-amber-700 w-full">
+            <div>
+                <h1 class="text-3xl font-bold text-white">Kim Gary</h1>
+            </div>
+        </nav>
+        <div class="container mx-auto p-8">
+            <KimgaryCalculator client:load />
+        </div>
+    </body>
+</html>

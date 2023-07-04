@@ -7,9 +7,24 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Bill Splitter</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="font-sans bg-slate-200">
+		<nav class="flex p-4 bg-sky-950 w-full">
+			<div>
+				<h1 class="text-3xl font-bold text-white">Bill Splitter</h1>
+			</div>
+		</nav>
+		<div class="container mx-auto p-8">
+			<h2 class="text-4xl text-center">Select a Restaurant</h2>
+			<div class="grid grid-cols-4 gap-4">
+				<a href="/kimgary" class="bg-amber-700 rounded-md p-4">
+					<img
+						src="https://lh3.googleusercontent.com/deZ2RpeG1dHtw_i_zpdDOlcz6QBWCygMcI2r6ffu62YKlZ7OoKOavsY8xCIskQXfWH6JJrSR6wDDM5W8OhxgR7ggMAV3h2toJdm-i7ihfA=w500-rw"
+						alt="Link to Kim Gary's Bill Splitter"
+					/>
+				</a>
+			</div>
+		</div>
 	</body>
 </html>
