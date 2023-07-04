@@ -4,7 +4,7 @@ A simple bill split calculator with calculation breakdown, more restaurant could
 
 ## Supported Restaurant
 
-1. ![Kim Gary](https://lh3.googleusercontent.com/deZ2RpeG1dHtw_i_zpdDOlcz6QBWCygMcI2r6ffu62YKlZ7OoKOavsY8xCIskQXfWH6JJrSR6wDDM5W8OhxgR7ggMAV3h2toJdm-i7ihfA=w500-rw | width=100)
+1. <img src="https://lh3.googleusercontent.com/deZ2RpeG1dHtw_i_zpdDOlcz6QBWCygMcI2r6ffu62YKlZ7OoKOavsY8xCIskQXfWH6JJrSR6wDDM5W8OhxgR7ggMAV3h2toJdm-i7ihfA=w500-rw" width="100" height="100">
 
 ## 🧞 Commands
 
