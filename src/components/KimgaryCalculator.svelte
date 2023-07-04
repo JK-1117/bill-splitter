@@ -86,7 +86,7 @@
   {#if isDiscounted}
     <div class="flex justify-between items-center">
       <input
-        class="w-full py-2 px-4 border border-amber-500 mx-2"
+        class="w-28 md:w-52 py-2 px-4 border border-amber-500 mx-2"
         type="number"
         name="percentOff"
         id="percentOff"
