@@ -1,7 +1,9 @@
 <script>
   let items = [""];
+  let isDiscounted = true;
+  $: percentOff = isDiscounted ? 25 : 0;
   $: subTotal = items.reduce((acc, amt) => acc + Number(amt), 0);
-  $: discountedAmt = subTotal * 0.75;
+  $: discountedAmt = (subTotal * (100 - percentOff)) / 100;
   $: gst = discountedAmt * 0.06;
   $: serviceCharge = subTotal * 0.1;
   $: total = (discountedAmt + gst + serviceCharge).toFixed(2);
@@ -69,6 +71,32 @@
   </tfoot>
 </table>
 
+<div class="flex my-4 justify-end items-center text-xl md:text-2xl">
+  <div>
+    <label for="isDiscounted">
+      <input
+        type="checkbox"
+        name="isDiscounted"
+        id="isDiscounted"
+        bind:checked={isDiscounted}
+      />
+      is discounted?
+    </label>
+  </div>
+  {#if isDiscounted}
+    <div class="flex justify-between items-center">
+      <input
+        class="w-full py-2 px-4 border border-amber-500 mx-2"
+        type="number"
+        name="percentOff"
+        id="percentOff"
+        bind:value={percentOff}
+      />
+      <span>%</span>
+    </div>
+  {/if}
+</div>
+
 <h1 class="text-7xl md:text-9xl text-sky-600 w-full text-center mt-4">
   RM {total}
 </h1>
@@ -95,8 +123,10 @@
 
     <tr class="border border-slate-300">
       <td class="p-4">
-        <p class="text-xl md:text-2xl">Discounted Amount (25%):</p>
-        <span class="text-base">(Sub Total x 0.75)</span>
+        <p class="text-xl md:text-2xl">Discounted Amount ({percentOff}%):</p>
+        <span class="text-base"
+          >(Sub Total x {((100 - percentOff) / 100).toFixed(2)})</span
+        >
       </td>
       <td class="text-xl md:text-2xl p-4 text-right whitespace-nowrap">
         RM {discountedAmt.toFixed(2)}
